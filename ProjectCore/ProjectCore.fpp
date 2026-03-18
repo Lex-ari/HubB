@@ -21,7 +21,7 @@ module ProjectCore {
 
     instance AtoBHub: Svc.GenericHub base id ProjectCoreConfig.BASE_ID + 0x0800
 
-    instance pingB: Components.Ping base id ProjectCoreConfig.BASE_ID + 0x0900
+    instance pingB: Components.Ping base id ProjectCoreConfig.BASE_ID + 0x0950
 
     @ My Subtopology Description
     topology ProjectCore {

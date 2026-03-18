@@ -41,7 +41,7 @@ module BDeployment {
 
     command connections instance CdhCore.cmdDisp
     event connections instance CdhCore.events
-    telemetry connections instance CdhCore.tlmSend
+    # telemetry connections instance CdhCore.tlmSend
     text event connections instance CdhCore.textLogger
     health connections instance CdhCore.$health
     param connections instance FileHandling.prmDb
@@ -134,7 +134,8 @@ module BDeployment {
     }
 
     connections BDeployment {
-
+      ProjectCore.pingB.tlmOut -> ProjectCore.AtoBHub.tlmIn
+      # ProjectCore.pingB.logOut -> ProjectCore.AtoBHub.eventIn
     }
 
     connections AtoBDriverConnections {
