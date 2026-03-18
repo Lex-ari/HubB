@@ -21,7 +21,7 @@ module ProjectCore {
 
     instance AtoBHub: Svc.GenericHub base id ProjectCoreConfig.BASE_ID + 0x0800
 
-    instance pingA: Components.Ping base id ProjectCoreConfig.BASE_ID + 0x0900
+    instance pingB: Components.Ping base id ProjectCoreConfig.BASE_ID + 0x0900
 
     @ My Subtopology Description
     topology ProjectCore {
@@ -29,7 +29,7 @@ module ProjectCore {
         instance AtoBAdapter
 
         instance AtoBHub
-        instance pingA
+        instance pingB
 
         connections HubSend {
             AtoBHub.toBufferDriver -> AtoBAdapter.bufferIn
@@ -51,8 +51,8 @@ module ProjectCore {
             # AtoBHub.tlmOut -> CdhCore.tlmSend.TlmRecv
             # AtoBHub.eventOut -> CdhCore.events.LogRecv
 
-            pingA.ping -> AtoBHub.serialIn[HubPorts.PingSend]
-            AtoBHub.serialOut[HubPorts.PingSend] -> pingA.pong
+            pingB.ping -> AtoBHub.serialIn[HubPorts.PingSend]
+            AtoBHub.serialOut[HubPorts.PingSend] -> pingB.pong
         }
 
     } # end topology

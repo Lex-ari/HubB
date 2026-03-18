@@ -161,6 +161,11 @@ telemetry packets BDeploymentPackets {
     CdhCore.version.CustomVersion10
   }
 
+  packet Ping group 0 {
+    ProjectCore.pingB.numPing
+    ProjectCore.pingB.numPong
+  }
+
 } omit {
   CdhCore.cmdDisp.CommandErrors
 }
