@@ -4,7 +4,7 @@ The GenericHub pattern enables port connections to span two physically separate 
 This project consists of 3 repositories:
 - [ADeployment](https://github.com/Lex-ari/HubA): A "primary" FSW
 - [BDeployment](https://github.com/Lex-ari/HubB): A "secondary" FSW (ex. payload/sensor)
-- [HubInterface](https://github.com/Lex-ari/HubInterfaces)
+- [HubInterface](https://github.com/Lex-ari/HubInterfaces): Interface defining hub connections and shared ports
 
 
 ### BDeployment
