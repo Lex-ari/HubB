@@ -1,0 +1,12 @@
+add_fprime_subdirectory("${CMAKE_CURRENT_LIST_DIR}/ProjectCoreConfig/")
+register_fprime_module(
+    ProjectCore
+    AUTOCODER_INPUTS
+        "${CMAKE_CURRENT_LIST_DIR}/ProjectCore.fpp"
+    HEADERS
+        "${CMAKE_CURRENT_LIST_DIR}/PingEntries.hpp"
+    DEPENDS
+        lib_Interfaces
+        ProjectCore_ProjectCoreConfig
+    INTERFACE
+)

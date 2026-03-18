@@ -1,0 +1,11 @@
+register_fprime_config(
+    EXCLUDE_FROM_ALL
+    SOURCES
+        "${CMAKE_CURRENT_LIST_DIR}/ProjectCoreSubtopologyConfig.cpp"
+    HEADERS
+        "${CMAKE_CURRENT_LIST_DIR}/ProjectCoreSubtopologyConfig.hpp"
+    AUTOCODER_INPUTS
+        ${CMAKE_CURRENT_LIST_DIR}/ProjectCoreConfig.fpp
+    DEPENDS
+        Fw_Types
+)
