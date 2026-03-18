@@ -1,5 +1,5 @@
 module Components {
-    include "../../lib/Interfaces/HubInterface.fpp"
+    include "../../lib/HubInterfaces/HubInterface.fpp"
     @ Component for F Prime FSW framework.
     passive component Ping {
         
