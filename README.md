@@ -1,6 +1,12 @@
 # HubB F' project
 The GenericHub pattern enables port connections to span two physically separate F' deployments. Multiple connections are multiplexed through a single TCP connection.
 
+This project consists of 3 repositories:
+- [ADeployment](https://github.com/Lex-ari/HubA): A "primary" FSW
+- [BDeployment](https://github.com/Lex-ari/HubB): A "secondary" FSW (ex. payload/sensor)
+- [HubInterface](https://github.com/Lex-ari/HubInterfaces)
+
+
 ### BDeployment
 - Main deployment topology
 - Runs a TcpClient connecting to 127.0.0.1:5020
